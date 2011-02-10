@@ -2,12 +2,15 @@ package com.ngiap;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MenuInflater;
+import android.view.View.OnClickListener;
 import android.app.Dialog;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.widget.Button;
 
 public class Hello extends Activity {
     
@@ -17,6 +20,12 @@ public class Hello extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
+        Button button = (Button)findViewById(R.id.button_one);
+        button.setOnClickListener(new OnClickListener() {
+            public void onClick(View v) {
+                showDialog(DIALOG_ONE);
+            }
+        });
     }
     
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -71,3 +80,4 @@ public class Hello extends Activity {
         return builder.create();
     }
 }
+
