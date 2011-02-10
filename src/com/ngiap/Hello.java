@@ -19,6 +19,7 @@ public class Hello extends Activity {
         return true;
     }
     
+	@SuppressWarnings("unused")
 	private static void walk() {
     	System.out.println("walk");
     }
