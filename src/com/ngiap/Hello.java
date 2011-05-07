@@ -10,6 +10,7 @@ import android.view.View.OnClickListener;
 import android.app.Dialog;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.widget.Button;
 
 public class Hello extends Activity {
@@ -33,14 +34,23 @@ public class Hello extends Activity {
         inflater.inflate(R.menu.m, menu);
         return true;
     }
+
+    private void showSubActivity() {
+	Intent i = new Intent();
+	i.setClassName("com.ngiap", "com.ngiap.Page2");
+	startActivityForResult(i, 1);
+    }
     
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle item selection
         switch (item.getItemId()) {
-        case R.id.eight:
+        case R.id.exit:
             showDialog(DIALOG_ONE);
             return true;
+	case R.id.one:
+	    showSubActivity();
+	    return true;
         default:
             return super.onOptionsItemSelected(item);
         }
@@ -58,8 +68,8 @@ public class Hello extends Activity {
         return dialog;
     }    
     
-	@SuppressWarnings("unused")
-	private static void walk() {
+    @SuppressWarnings("unused")
+    private static void walk() {
     	System.out.println("walk");
     }
     

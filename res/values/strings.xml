@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="hello">Isn\'t this cool? :-)</string>
-    <string name="app_name">Cool</string>
+    <string name="main_label">This is stupid app</string>
+    <string name="page2_label">This is stupid page 2</string>
+    <string name="app_name">Stupid!</string>
+    <string name="page_2">Page 2</string>
+    <string name="main_button1">quit...</string>
+    <string name="page2_button1">go home</string>
+    <string name="menu_exit">Exit</string>
+    <string name="menu_1">Child</string>
+    <string name="menu_2">Two</string>
+    <string name="menu_3">Three</string>
+    <string name="menu_4">Four</string>
+    <string name="menu_5">Five</string>
+    <string name="menu_6">Six</string>
+    <string name="menu_7">Seven</string>
 </resources>

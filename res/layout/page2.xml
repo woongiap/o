@@ -5,9 +5,9 @@
     android:layout_height="match_parent" >
     <TextView android:layout_width="match_parent" 
 	      android:layout_height="wrap_content" 
-	      android:text="@string/main_label" />
+	      android:text="@string/page2_label" />
     <Button android:id="@+id/button_one" 
 	    android:layout_width="wrap_content"
 	    android:layout_height="wrap_content"
-	    android:text="@string/main_button1" />
+	    android:text="@string/page2_button1" />
 </LinearLayout>
