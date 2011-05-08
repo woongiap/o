@@ -16,6 +16,15 @@ import android.widget.Button;
 public class Hello extends Activity {
     
     private static final int DIALOG_ONE = 1;
+    static {
+        System.loadLibrary("hello-jni");
+    }
+
+    /* A native method that is implemented by the
+     * 'hello-jni' native library, which is packaged
+     * with this application.
+     */
+    public native String jniString();
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -75,7 +84,7 @@ public class Hello extends Activity {
     
     private Dialog createAlertDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setMessage("Are you sure you want to exit?")
+        builder.setMessage(jniString())
                .setCancelable(false)
                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                    public void onClick(DialogInterface dialog, int id) {
