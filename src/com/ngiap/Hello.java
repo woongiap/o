@@ -24,7 +24,7 @@ public class Hello extends Activity {
      * 'hello-jni' native library, which is packaged
      * with this application.
      */
-    public native String jniString();
+    public native String jniString(int i, String s);
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -79,12 +79,12 @@ public class Hello extends Activity {
     
     @SuppressWarnings("unused")
     private static void walk() {
-    	System.out.println("walk");
+    	System.err.println("This is unused!!!");
     }
     
     private Dialog createAlertDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setMessage(jniString())
+        builder.setMessage(jniString(8, "EIGHT"))
                .setCancelable(false)
                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                    public void onClick(DialogInterface dialog, int id) {
