@@ -2,3 +2,6 @@
 local.properties
 bin/*
 gen/*
+libs/*
+obj/*
+.settings/*
